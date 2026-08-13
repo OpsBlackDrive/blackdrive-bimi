@@ -2,7 +2,7 @@ name: Email Pattern Verifier
 
 on:
   push:
-    branches: [main]
+    branches: [email-verifier]
     paths:
       - 'email-verifier/request.json'
 
@@ -38,12 +38,7 @@ jobs:
           try:
               req = json.loads(req_path.read_text())
           except Exception as e:
-              out_path.write_text(json.dumps({
-                  'request_id': None,
-                  'checked_at': checked_at,
-                  'status': 'error',
-                  'error': f'invalid_request_json: {e}'
-              }, indent=2))
+              out_path.write_text(json.dumps({'request_id': None, 'checked_at': checked_at, 'status': 'error', 'error': f'invalid_request_json: {e}'}, indent=2))
               raise SystemExit(0)
 
           request_id = str(req.get('request_id') or '')
@@ -61,25 +56,19 @@ jobs:
           domain = re.sub(r'^https?://', '', domain).split('/')[0].strip('.')
 
           if not request_id or not first or not last or not domain or '.' not in domain:
-              out_path.write_text(json.dumps({
-                  'request_id': request_id or None,
-                  'checked_at': checked_at,
-                  'status': 'error',
-                  'error': 'request_requires_request_id_first_name_last_name_domain'
-              }, indent=2))
+              out_path.write_text(json.dumps({'request_id': request_id or None, 'checked_at': checked_at, 'status': 'error', 'error': 'request_requires_request_id_first_name_last_name_domain'}, indent=2))
               raise SystemExit(0)
 
-          patterns = []
           supported = {
               'firstname': first,
               'first.last': f'{first}.{last}',
               'flastname': f'{first[0]}{last}',
-              'firstname.lastname': f'{first}.{last}',
               'firstnamelastname': f'{first}{last}',
               'firstname_lastname': f'{first}_{last}',
               'firstname-lastname': f'{first}-{last}',
               'firstinitial.lastname': f'{first[0]}.{last}',
           }
+          patterns = []
           if pattern_hint in supported:
               patterns.append((pattern_hint, supported[pattern_hint]))
           for key in ['firstname','first.last','flastname','firstnamelastname','firstname_lastname','firstname-lastname','firstinitial.lastname']:
@@ -95,13 +84,7 @@ jobs:
               email = f'{local}@{domain}'
               payload = json.dumps({'email': email})
               try:
-                  p = subprocess.run([
-                      'curl','--silent','--show-error','--location',
-                      '--connect-timeout','15','--max-time','70',
-                      '-X','POST','https://email-checker-online.com/api/validate-single',
-                      '-H','Content-Type: application/json',
-                      '--data', payload
-                  ], text=True, capture_output=True, timeout=80)
+                  p = subprocess.run(['curl','--silent','--show-error','--location','--connect-timeout','15','--max-time','70','-X','POST','https://email-checker-online.com/api/validate-single','-H','Content-Type: application/json','--data',payload], text=True, capture_output=True, timeout=80)
                   if p.returncode != 0:
                       attempts.append({'pattern': pattern, 'status': 'inconclusive', 'reason': 'provider_transport_error'})
                       continue
@@ -132,16 +115,7 @@ jobs:
                   attempts.append({'pattern': pattern, 'status': 'inconclusive', 'reason': 'provider_exception'})
 
           status = 'valid' if valid_pattern else ('invalid' if attempts and all(a['status']=='invalid' for a in attempts) else 'inconclusive')
-          result = {
-              'request_id': request_id,
-              'checked_at': checked_at,
-              'status': status,
-              'valid_pattern': valid_pattern,
-              'domain': domain,
-              'provider': provider,
-              'attempts': attempts
-          }
-          out_path.write_text(json.dumps(result, indent=2))
+          out_path.write_text(json.dumps({'request_id': request_id, 'checked_at': checked_at, 'status': status, 'valid_pattern': valid_pattern, 'domain': domain, 'provider': provider, 'attempts': attempts}, indent=2))
           PY
 
       - name: Persist result without failing notification noise
@@ -154,7 +128,7 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m 'email verifier result'
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            git pull --rebase origin email-verifier && git push origin email-verifier && exit 0
             sleep $((i*2))
           done
           echo 'Result persistence failed after retries; workflow exits successfully to avoid notification spam.'
