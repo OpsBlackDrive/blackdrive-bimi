@@ -1,45 +1,15 @@
 {
-  "request_id": "masha-nour-kishk-20260820T114646",
-  "checked_at": "2026-08-20T07:47:00Z",
-  "status": "invalid",
-  "valid_pattern": null,
-  "domain": "mashaestate.ae",
+  "request_id": "tanzaga-afraa-mahboob-20260820T1235",
+  "checked_at": "2026-08-20T08:39:49Z",
+  "status": "valid",
+  "valid_pattern": "firstname",
+  "domain": "tanzaga.com",
   "provider": "email-checker-online.com",
   "attempts": [
     {
       "pattern": "firstname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
-    },
-    {
-      "pattern": "first.last",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
-    },
-    {
-      "pattern": "flastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
-    },
-    {
-      "pattern": "firstnamelastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
-    },
-    {
-      "pattern": "firstname_lastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
-    },
-    {
-      "pattern": "firstname-lastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
-    },
-    {
-      "pattern": "firstinitial.lastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
+      "status": "valid",
+      "smtp_rcpt_code": 250
     }
   ]
 }
