@@ -1,45 +1,15 @@
 {
-  "request_id": "noard-cor-zuidema-20260820T0951",
-  "checked_at": "2026-08-20T05:55:11Z",
-  "status": "inconclusive",
-  "valid_pattern": null,
-  "domain": "noardrealestate.com",
+  "request_id": "alamera-ali-sobhy-20260820T1000",
+  "checked_at": "2026-08-20T05:58:16Z",
+  "status": "valid",
+  "valid_pattern": "firstname",
+  "domain": "alameraproperties.com",
   "provider": "email-checker-online.com",
   "attempts": [
     {
       "pattern": "firstname",
-      "status": "inconclusive",
-      "reason": "catch_all"
-    },
-    {
-      "pattern": "first.last",
-      "status": "inconclusive",
-      "reason": "catch_all"
-    },
-    {
-      "pattern": "flastname",
-      "status": "inconclusive",
-      "reason": "catch_all"
-    },
-    {
-      "pattern": "firstnamelastname",
-      "status": "inconclusive",
-      "reason": "catch_all"
-    },
-    {
-      "pattern": "firstname_lastname",
-      "status": "inconclusive",
-      "reason": "catch_all"
-    },
-    {
-      "pattern": "firstname-lastname",
-      "status": "inconclusive",
-      "reason": "catch_all"
-    },
-    {
-      "pattern": "firstinitial.lastname",
-      "status": "inconclusive",
-      "reason": "catch_all"
+      "status": "valid",
+      "smtp_rcpt_code": 250
     }
   ]
 }
