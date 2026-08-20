@@ -1,9 +1,9 @@
 {
-  "request_id": "alamera-ali-sobhy-20260820T1000",
-  "checked_at": "2026-08-20T05:58:16Z",
+  "request_id": "tlre-anupam-mishra-20260820T1042",
+  "checked_at": "2026-08-20T06:43:27Z",
   "status": "valid",
   "valid_pattern": "firstname",
-  "domain": "alameraproperties.com",
+  "domain": "theluxuryrealestate.ae",
   "provider": "email-checker-online.com",
   "attempts": [
     {
