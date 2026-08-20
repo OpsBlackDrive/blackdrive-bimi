@@ -1,45 +1,45 @@
 {
-  "request_id": "nolix-mohammad-sabbah-20260820T1545",
-  "checked_at": "2026-08-20T11:38:17Z",
+  "request_id": "vhc-ahmed-abuzeidan-20260820T1636",
+  "checked_at": "2026-08-20T12:42:13Z",
   "status": "invalid",
   "valid_pattern": null,
-  "domain": "nolixrealestate.com",
+  "domain": "vhc.ae",
   "provider": "email-checker-online.com",
   "attempts": [
     {
       "pattern": "firstname",
       "status": "invalid",
-      "smtp_rcpt_code": 504
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "first.last",
       "status": "invalid",
-      "smtp_rcpt_code": 504
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "flastname",
       "status": "invalid",
-      "smtp_rcpt_code": 504
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "firstnamelastname",
       "status": "invalid",
-      "smtp_rcpt_code": 504
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "firstname_lastname",
       "status": "invalid",
-      "smtp_rcpt_code": 504
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "firstname-lastname",
       "status": "invalid",
-      "smtp_rcpt_code": 504
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "firstinitial.lastname",
       "status": "invalid",
-      "smtp_rcpt_code": 504
+      "smtp_rcpt_code": -1
     }
   ]
 }
