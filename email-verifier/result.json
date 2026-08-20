@@ -1,9 +1,9 @@
 {
-  "request_id": "rh-homes-mohamed-elsaied-20260820T114441",
-  "checked_at": "2026-08-20T07:44:54Z",
+  "request_id": "masha-nour-kishk-20260820T114646",
+  "checked_at": "2026-08-20T07:47:00Z",
   "status": "invalid",
   "valid_pattern": null,
-  "domain": "rhhomesrealtor.com",
+  "domain": "mashaestate.ae",
   "provider": "email-checker-online.com",
   "attempts": [
     {
