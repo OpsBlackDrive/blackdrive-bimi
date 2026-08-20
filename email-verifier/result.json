@@ -1,15 +1,45 @@
 {
-  "request_id": "tanzaga-afraa-mahboob-20260820T1235",
-  "checked_at": "2026-08-20T08:39:49Z",
-  "status": "valid",
-  "valid_pattern": "firstname",
-  "domain": "tanzaga.com",
+  "request_id": "atam-mohammad-mushtaque-20260820T1336",
+  "checked_at": "2026-08-20T09:37:52Z",
+  "status": "invalid",
+  "valid_pattern": null,
+  "domain": "atamproperties.com",
   "provider": "email-checker-online.com",
   "attempts": [
     {
       "pattern": "firstname",
-      "status": "valid",
-      "smtp_rcpt_code": 250
+      "status": "invalid",
+      "smtp_rcpt_code": -1
+    },
+    {
+      "pattern": "first.last",
+      "status": "invalid",
+      "smtp_rcpt_code": -1
+    },
+    {
+      "pattern": "flastname",
+      "status": "invalid",
+      "smtp_rcpt_code": -1
+    },
+    {
+      "pattern": "firstnamelastname",
+      "status": "invalid",
+      "smtp_rcpt_code": -1
+    },
+    {
+      "pattern": "firstname_lastname",
+      "status": "invalid",
+      "smtp_rcpt_code": -1
+    },
+    {
+      "pattern": "firstname-lastname",
+      "status": "invalid",
+      "smtp_rcpt_code": -1
+    },
+    {
+      "pattern": "firstinitial.lastname",
+      "status": "invalid",
+      "smtp_rcpt_code": -1
     }
   ]
 }
