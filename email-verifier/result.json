@@ -1,45 +1,45 @@
 {
-  "request_id": "wayroyal-azhar-afridi-20260820T0936",
-  "checked_at": "2026-08-20T05:41:25Z",
-  "status": "invalid",
+  "request_id": "noard-cor-zuidema-20260820T0951",
+  "checked_at": "2026-08-20T05:55:11Z",
+  "status": "inconclusive",
   "valid_pattern": null,
-  "domain": "wayroyalrealestate.com",
+  "domain": "noardrealestate.com",
   "provider": "email-checker-online.com",
   "attempts": [
     {
       "pattern": "firstname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
+      "status": "inconclusive",
+      "reason": "catch_all"
     },
     {
       "pattern": "first.last",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
+      "status": "inconclusive",
+      "reason": "catch_all"
     },
     {
       "pattern": "flastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
+      "status": "inconclusive",
+      "reason": "catch_all"
     },
     {
       "pattern": "firstnamelastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
+      "status": "inconclusive",
+      "reason": "catch_all"
     },
     {
       "pattern": "firstname_lastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
+      "status": "inconclusive",
+      "reason": "catch_all"
     },
     {
       "pattern": "firstname-lastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
+      "status": "inconclusive",
+      "reason": "catch_all"
     },
     {
       "pattern": "firstinitial.lastname",
-      "status": "invalid",
-      "smtp_rcpt_code": 550
+      "status": "inconclusive",
+      "reason": "catch_all"
     }
   ]
 }
