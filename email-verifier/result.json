@@ -1,45 +1,45 @@
 {
-  "request_id": "stratford-abdulla-majid-mohammed-20260820T113842",
-  "checked_at": "2026-08-20T07:38:54Z",
+  "request_id": "creativehomes-yogesh-khemani-20260820T114243",
+  "checked_at": "2026-08-20T07:42:56Z",
   "status": "invalid",
   "valid_pattern": null,
-  "domain": "stratfordproperties.ae",
+  "domain": "creativehomes.ae",
   "provider": "email-checker-online.com",
   "attempts": [
     {
       "pattern": "firstname",
       "status": "invalid",
-      "smtp_rcpt_code": 550
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "first.last",
       "status": "invalid",
-      "smtp_rcpt_code": 550
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "flastname",
       "status": "invalid",
-      "smtp_rcpt_code": 550
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "firstnamelastname",
       "status": "invalid",
-      "smtp_rcpt_code": 550
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "firstname_lastname",
       "status": "invalid",
-      "smtp_rcpt_code": 550
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "firstname-lastname",
       "status": "invalid",
-      "smtp_rcpt_code": 550
+      "smtp_rcpt_code": -1
     },
     {
       "pattern": "firstinitial.lastname",
       "status": "invalid",
-      "smtp_rcpt_code": 550
+      "smtp_rcpt_code": -1
     }
   ]
 }
